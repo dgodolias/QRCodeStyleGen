@@ -29,7 +29,7 @@ export function App() {
         <div className="brand">
           <img className="brand-logo" src={`${import.meta.env.BASE_URL}quar_logo.png`} alt="QuaR" />
           <div>
-            <h1>QuaR</h1>
+            <h1 className="visually-hidden">QuaR</h1>
             <div className="tagline">Design beautiful QR codes - private, in your browser</div>
           </div>
         </div>
