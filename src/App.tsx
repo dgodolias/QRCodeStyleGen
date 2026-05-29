@@ -27,14 +27,14 @@ export function App() {
     <div className="app">
       <header className="app-header">
         <div className="brand">
-          <div className="logo-dot" aria-hidden="true" />
+          <img className="brand-logo" src={`${import.meta.env.BASE_URL}quar_logo.png`} alt="QuaR" />
           <div>
-            <h1>QR Style Studio</h1>
-            <div className="tagline">Design beautiful QR codes — private, in your browser</div>
+            <h1>QuaR</h1>
+            <div className="tagline">Design beautiful QR codes - private, in your browser</div>
           </div>
         </div>
         <div className="header-links">
-          <span className="chip" title="Nothing is uploaded">🔒 100% client-side</span>
+          <span className="chip" title="Nothing is uploaded">100% client-side</span>
         </div>
       </header>
 
@@ -79,7 +79,7 @@ export function App() {
 
       <footer className="app-footer">
         <div>
-          QR Style Studio · free &amp; open source · no tracking, no accounts, no uploads.
+          QuaR · free &amp; open source · no tracking, no accounts, no uploads.
         </div>
         <div>
           Your content, logo and design never leave your device.

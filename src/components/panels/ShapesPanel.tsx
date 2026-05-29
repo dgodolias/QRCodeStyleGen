@@ -74,7 +74,7 @@ export function ShapesPanel() {
           <div className="notice warn" data-testid="notice-spacing">
             <span>⚠</span>
             <span>
-              Large gaps can make the code harder to scan — test with your phone before
+              Large gaps can make the code harder to scan - test with your phone before
               downloading.
             </span>
           </div>

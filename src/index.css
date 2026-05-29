@@ -44,13 +44,11 @@ a:hover { text-decoration: underline; }
   flex-wrap: wrap;
   margin-bottom: 24px;
 }
-.app-header .brand { display: flex; align-items: center; gap: 12px; }
-.app-header .brand .logo-dot {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: linear-gradient(135deg, #9c3aaf, #4078ff);
-  box-shadow: var(--shadow-pop);
+.app-header .brand { display: flex; align-items: center; gap: 14px; }
+.app-header .brand .brand-logo {
+  height: 46px; width: auto; display: block;
 }
-.app-header h1 { font-size: 24px; }
+.app-header h1 { font-size: 24px; line-height: 1.1; }
 .app-header .tagline { color: var(--muted); font-size: 13px; }
 .app-header .header-links { display: flex; align-items: center; gap: 10px; }
 
@@ -216,6 +214,8 @@ input[type="range"] { width: 100%; accent-color: var(--ink); cursor: pointer; }
 .export-formats { display: flex; gap: 8px; }
 .export-formats button { flex: 1; }
 .btn-block { width: 100%; justify-content: center; display: inline-flex; align-items: center; gap: 8px; }
+.download-btn { margin-top: 4px; padding-top: 15px; padding-bottom: 15px; font-size: 15px; }
+.download-btn svg { flex: 0 0 auto; }
 
 /* ─── Toggles ────────────────────────────────────────────── */
 .switch-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }

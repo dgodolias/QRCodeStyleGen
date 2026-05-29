@@ -29,7 +29,7 @@ export interface StyleColor {
 }
 
 export interface LogoConfig {
-  /** Sanitized, canvas-re-encoded base64 data URL — the ONLY thing handed to the engine. */
+  /** Sanitized, canvas-re-encoded base64 data URL - the ONLY thing handed to the engine. */
   dataUrl: string;
   name: string;
   size: number; // imageSize coefficient, clamped 0.1..0.3

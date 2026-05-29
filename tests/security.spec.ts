@@ -9,7 +9,7 @@ import {
   realSvgBuffer,
 } from './helpers';
 
-test.describe('Security — uploads', () => {
+test.describe('Security - uploads', () => {
   test.beforeEach(async ({ page }) => {
     await gotoApp(page);
     await page.getByTestId('tab-logo').click();
@@ -50,7 +50,7 @@ test.describe('Security — uploads', () => {
   });
 });
 
-test.describe('Security — text & content', () => {
+test.describe('Security - text & content', () => {
   test.beforeEach(async ({ page }) => {
     await gotoApp(page);
   });
@@ -82,7 +82,7 @@ test.describe('Security — text & content', () => {
   test('a javascript: payload triggers a soft warning but is NOT blocked', async ({ page }) => {
     await page.getByTestId('input-data').fill('javascript:alert(1)');
     await expect(page.getByTestId('notice-scheme')).toBeVisible({ timeout: 8000 });
-    // Generation still proceeds — the QR is rendered.
+    // Generation still proceeds - the QR is rendered.
     await waitForPreview(page);
     expect((await readPreview(page)).length).toBeGreaterThan(100);
   });
@@ -100,7 +100,7 @@ test.describe('Security — text & content', () => {
   });
 });
 
-test.describe('Security — CSP & isolation', () => {
+test.describe('Security - CSP & isolation', () => {
   test('no third-party network requests; no CSP violations', async ({ page }) => {
     const external: string[] = [];
     const cspViolations: string[] = [];

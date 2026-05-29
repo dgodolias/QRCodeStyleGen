@@ -4,7 +4,7 @@
    ============================================================ */
 
 
-/* ─── Primary button — dark filled pill ────────────────────── */
+/* ─── Primary button - dark filled pill ────────────────────── */
 .btn-primary {
   padding: 14px 32px;
   border: 0;
@@ -34,7 +34,7 @@
 }
 
 
-/* ─── Secondary button — outlined pill ─────────────────────── */
+/* ─── Secondary button - outlined pill ─────────────────────── */
 .btn-secondary {
   padding: 14px 32px;
   border: 1px solid var(--hairline-strong);
@@ -56,7 +56,7 @@
 .btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
 
 
-/* ─── Card / panel — glassmorphism with generous radius ───── */
+/* ─── Card / panel - glassmorphism with generous radius ───── */
 .card {
   background: var(--surface);
   border: 1px solid var(--hairline);
@@ -68,7 +68,7 @@
 }
 
 
-/* ─── Text input row — rounded pill with inline submit ────── */
+/* ─── Text input row - rounded pill with inline submit ────── */
 .input-row {
   display: flex;
   align-items: center;
@@ -112,7 +112,7 @@
 .input-row .submit:active { transform: scale(0.98); }
 
 
-/* ─── Standalone input — rounded rectangle ───────────────── */
+/* ─── Standalone input - rounded rectangle ───────────────── */
 .input {
   width: 100%;
   padding: 13px 18px;
@@ -174,7 +174,7 @@
 }
 
 
-/* ─── Status line — small, muted, sentence-case ─────────── */
+/* ─── Status line - small, muted, sentence-case ─────────── */
 .status {
   text-align: center;
   font-size: 12px;

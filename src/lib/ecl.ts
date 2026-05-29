@@ -13,7 +13,7 @@ export interface EclAdvice {
 }
 
 /** A logo punches a hole in the matrix, so error correction must be high enough to
- *  recover it. We recommend H whenever a logo is set. This does not mutate config —
+ *  recover it. We recommend H whenever a logo is set. This does not mutate config -
  *  it only reports; the reducer auto-raises and the user may override with a warning. */
 export function adviseEcl(cfg: QRConfig): EclAdvice {
   if (!cfg.logo) return { belowLogoFloor: false, warning: null };

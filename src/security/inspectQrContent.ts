@@ -8,7 +8,7 @@ export const ECL_BYTE_CAP: Record<ErrorCorrectionLevel, number> = {
   H: 1273,
 };
 
-// Schemes a careless scanner app might auto-open. We WARN, never block — it's the
+// Schemes a careless scanner app might auto-open. We WARN, never block - it's the
 // user's own QR and these can be legitimate, but they deserve a heads-up.
 const DANGEROUS_SCHEMES = ['javascript:', 'data:', 'file:', 'vbscript:', 'blob:'];
 

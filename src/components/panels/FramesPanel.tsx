@@ -21,7 +21,7 @@ const FILTERS: { id: Filter; label: string }[] = [
 ];
 
 /** Static thumbnail markup per frame: the frame drawn with its default colors plus a
- *  grey placeholder in the QR slot. Computed once — independent of live config. */
+ *  grey placeholder in the QR slot. Computed once - independent of live config. */
 function buildThumb(def: FrameDef): string {
   const opts = {
     frameColor: def.defaultColor,
@@ -88,7 +88,7 @@ export function FramesPanel() {
         </div>
 
         {shown.length === 0 ? (
-          <div className="status">No frames yet — pick one to see it here.</div>
+          <div className="status">No frames yet - pick one to see it here.</div>
         ) : (
           <div className="swatch-grid frames">
             {shown.map((f) => (

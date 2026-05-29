@@ -20,7 +20,7 @@ function fill(s: StyleColor) {
  *                         `data:` URL that XHR is blocked by our CSP (connect-src 'self')
  *                         and the draw promise never resolves. We already canvas-re-encode
  *                         the logo in validateLogo, so we pass the clean data: URL straight
- *                         through (saveAsBlob:false) — embedded as-is in the SVG <image>,
+ *                         through (saveAsBlob:false) - embedded as-is in the SVG <image>,
  *                         and a data: URL never taints the export canvas. */
 export function toQrOptions(cfg: QRConfig): Options {
   const opts: Options = {
@@ -49,7 +49,7 @@ export function toQrOptions(cfg: QRConfig): Options {
   return opts;
 }
 
-/** Render the QR (only — no frame/text) to an SVG string, headless.
+/** Render the QR (only - no frame/text) to an SVG string, headless.
  *  getRawData('svg') awaits the internal drawing promise, so the logo <image>
  *  is guaranteed present in the output. Throws if `data` is empty. */
 export async function renderQrSvgString(cfg: QRConfig): Promise<string> {

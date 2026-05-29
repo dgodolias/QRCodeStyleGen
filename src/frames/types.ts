@@ -39,6 +39,6 @@ export interface FrameDef {
   defaultColor: string;
   defaultTextColor: string;
   /** Returns an SVG fragment (no <svg> wrapper) drawn BEHIND the QR, in 0..1000 space.
-   *  MUST be pure shapes/text — no <script>, <foreignObject>, <image>, or external refs. */
+   *  MUST be pure shapes/text - no <script>, <foreignObject>, <image>, or external refs. */
   render(opts: FrameRenderOpts): string;
 }

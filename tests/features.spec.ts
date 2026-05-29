@@ -151,9 +151,11 @@ test.describe('Downloads', () => {
   for (const fmt of ['png', 'svg', 'jpeg'] as const) {
     test(`downloads a ${fmt.toUpperCase()} file`, async ({ page }) => {
       const ext = fmt === 'jpeg' ? 'jpg' : fmt;
+      // Pick the format, then hit the single explicit Download button.
+      await page.getByTestId(`format-${fmt}`).click();
       const [download] = await Promise.all([
         page.waitForEvent('download', { timeout: 15000 }),
-        page.getByTestId(`download-${fmt}`).click(),
+        page.getByTestId('download-button').click(),
       ]);
       expect(download.suggestedFilename()).toMatch(new RegExp(`\\.${ext}$`));
       const stream = await download.createReadStream();

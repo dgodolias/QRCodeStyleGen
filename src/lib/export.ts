@@ -14,7 +14,7 @@ async function ensureFontsLoaded(): Promise<void> {
     ]);
     await document.fonts.ready;
   } catch {
-    /* non-fatal — fall back to system fonts */
+    /* non-fatal - fall back to system fonts */
   }
 }
 

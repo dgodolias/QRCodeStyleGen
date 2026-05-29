@@ -105,13 +105,14 @@ export function decodePngBuffer(buf: Buffer): string | null {
  *  Settles the preview first so we never export a half-built master.
  *  This tests the ACTUAL downloadable output, not a re-rasterized preview.
  *
- *  Default scale is 1 (1000px — already high resolution). jsQR's binarizer is less
+ *  Default scale is 1 (1000px - already high resolution). jsQR's binarizer is less
  *  robust than real phone scanners and mis-reads heavily anti-aliased circular "dots"
  *  at 2000px+; 1000px decodes cleanly for every style. The point of the test is to
  *  prove the QR PATTERN is valid, not to benchmark jsQR's anti-alias tolerance. */
 export async function decodeExportedPng(page: Page, scale = 1): Promise<string | null> {
   await waitForPreviewStable(page);
+  await page.getByTestId('format-png').click();
   await page.getByTestId(`scale-${scale}`).click();
-  const buf = await downloadBuffer(page, 'download-png');
+  const buf = await downloadBuffer(page, 'download-button');
   return decodePngBuffer(buf);
 }

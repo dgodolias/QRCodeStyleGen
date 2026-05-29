@@ -168,7 +168,7 @@ export const FRAMES: FrameDef[] = [
     name: 'New year',
     category: 'holidays',
     qrSlot: { x: 165, y: 270, w: 670, h: 670 },
-    cta: { defaultText: 'CHEERS 🎉', defaultSize: 54 },
+    cta: { defaultText: 'CHEERS', defaultSize: 54 },
     defaultColor: '#1a1a2e',
     defaultTextColor: '#ffd700',
     render: (o) =>
@@ -297,6 +297,6 @@ export function pushRecentFrame(id: string): void {
     const next = [id, ...getRecentFrameIds().filter((x) => x !== id)].slice(0, RECENT_MAX);
     localStorage.setItem(RECENT_KEY, JSON.stringify(next));
   } catch {
-    /* quota / private mode — non-fatal */
+    /* quota / private mode - non-fatal */
   }
 }

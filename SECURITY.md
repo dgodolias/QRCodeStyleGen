@@ -11,7 +11,7 @@ backend, SSRF, stored XSS) does not exist. The relevant surface is entirely **in
 | Logo image upload | Malicious SVG / polyglot / oversized file → XSS or memory abuse | Allow-list PNG/JPEG/WebP only; verify **magic bytes** (not just MIME/extension); enforce ≤ 2 MB and ≤ 2048×2048; **re-encode through a canvas** to discard EXIF/ICC/trailing payloads. See `src/security/validateLogo.ts`. |
 | Additional text / CTA text | Injection into the serialized export SVG | Length-capped and **XML-escaped** (`src/security/escapeXml.ts`) before insertion. Control characters stripped. |
 | SVG entering the DOM (preview) | mutation XSS via crafted SVG | Single choke point through **DOMPurify** with the SVG profile, `script`/`foreignObject` and event handlers forbidden (`sanitizeSvgForDom`). |
-| QR payload | A scanner auto-opening `javascript:`/`data:`/`file:` | **Soft warning**, not a block — the user owns their QR. |
+| QR payload | A scanner auto-opening `javascript:`/`data:`/`file:` | **Soft warning**, not a block - the user owns their QR. |
 | Third-party requests | IP/data leakage, CSP bypass | **No external origins.** Fonts self-hosted; strict CSP (`default-src 'self'`). |
 | Supply chain | Malicious dependency | Minimal deps, committed lockfile, `npm ci`, weekly Dependabot, `npm audit`. |
 

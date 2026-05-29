@@ -3,7 +3,7 @@
 // The logo is the only user-supplied binary the app touches, so it gets the full
 // fail-closed treatment: cheap checks first, then a canvas re-encode that strips any
 // embedded metadata / trailing payload / polyglot. Only the re-encoded data URL is
-// ever handed to the QR engine — never the original File.
+// ever handed to the QR engine - never the original File.
 
 export type LogoRejectReason = 'size' | 'mime' | 'magic' | 'decode' | 'dimensions';
 
@@ -31,7 +31,7 @@ async function readHead(file: File, n: number): Promise<Uint8Array> {
   return new Uint8Array(await file.slice(0, n).arrayBuffer());
 }
 
-/** Identify the real file kind by magic bytes — extension/MIME are not trusted. */
+/** Identify the real file kind by magic bytes - extension/MIME are not trusted. */
 function detectMagic(b: Uint8Array): AllowedKind | null {
   if (
     b[0] === 0x89 && b[1] === 0x50 && b[2] === 0x4e && b[3] === 0x47 &&

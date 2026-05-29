@@ -15,7 +15,7 @@
   --font-body:    "Google Sans Text", "Inter", -apple-system,
                   BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
 
-  /* Surfaces — semi-transparent so any background layer shows through */
+  /* Surfaces - semi-transparent so any background layer shows through */
   --bg:          #ffffff;       /* page background */
   --surface:     rgba(255, 255, 255, 0.66);   /* primary card */
   --surface-hi:  rgba(255, 255, 255, 0.88);   /* elevated card / bubble */
@@ -36,13 +36,13 @@
   --warn:            #b7791f;                  /* soft warning text */
   --ok:              #1f7a4d;                  /* success text */
 
-  /* Radii — Stitch favors generous, consistent rounding */
+  /* Radii - Stitch favors generous, consistent rounding */
   --r-pill:  999px;     /* buttons, chips, input rows */
   --r-card:  28px;      /* main cards */
   --r-input: 18px;      /* standalone inputs */
   --r-chip:  14px;      /* small tags, toggles */
 
-  /* Shadows — soft, layered, never harsh */
+  /* Shadows - soft, layered, never harsh */
   --shadow-card: 0 1px 0 rgba(10, 10, 20, 0.02),
                  0 12px 32px -16px rgba(10, 10, 20, 0.12);
   --shadow-pop:  0 1px 0 rgba(10, 10, 20, 0.04),

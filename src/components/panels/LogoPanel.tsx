@@ -7,7 +7,7 @@ import {
 } from '../../security/validateLogo';
 import { Switch } from '../Switch';
 
-// Open-license (CC0) built-in glyphs — simple, original stroke icons. NOT brand logos.
+// Open-license (CC0) built-in glyphs - simple, original stroke icons. NOT brand logos.
 const SAFE_ICONS: { id: string; label: string; path: string }[] = [
   { id: 'link', label: 'Link', path: '<path d="M9 15 L15 9 M10 7 L13 4 a4 4 0 0 1 6 6 l-3 3 M14 17 l-3 3 a4 4 0 0 1 -6 -6 l3 -3" fill="none" stroke="#0a0a14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' },
   { id: 'wifi', label: 'Wi-Fi', path: '<path d="M2 8 a15 15 0 0 1 20 0 M5 11.5 a10 10 0 0 1 14 0 M8 15 a5 5 0 0 1 8 0" fill="none" stroke="#0a0a14" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="19" r="1.6" fill="#0a0a14"/>' },
@@ -23,7 +23,7 @@ const ICON_SVG = (inner: string, size = 256): string =>
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="${size}" height="${size}">${inner}</svg>`;
 
 /** Rasterize one of our own trusted SVG icons to a PNG data URL, so the logo handed to
- *  the engine is always a clean PNG — same invariant as uploaded images. */
+ *  the engine is always a clean PNG - same invariant as uploaded images. */
 function iconToPngDataUrl(inner: string): Promise<string> {
   return new Promise((resolve, reject) => {
     const url = URL.createObjectURL(new Blob([ICON_SVG(inner)], { type: 'image/svg+xml' }));

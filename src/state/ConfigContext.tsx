@@ -19,7 +19,7 @@ function loadInitial(): QRConfig {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return DEFAULT_CONFIG;
     const parsed = JSON.parse(raw) as Partial<QRConfig>;
-    // Merge over defaults (tolerates schema growth). Logos are session-only — never persisted.
+    // Merge over defaults (tolerates schema growth). Logos are session-only - never persisted.
     return { ...DEFAULT_CONFIG, ...parsed, logo: null };
   } catch {
     return DEFAULT_CONFIG;
@@ -35,7 +35,7 @@ export function ConfigProvider({ children }: { children: ReactNode }) {
         const persistable: Partial<QRConfig> = { ...state, logo: null };
         localStorage.setItem(STORAGE_KEY, JSON.stringify(persistable));
       } catch {
-        /* quota / private mode — non-fatal */
+        /* quota / private mode - non-fatal */
       }
     }, 400);
     return () => clearTimeout(id);

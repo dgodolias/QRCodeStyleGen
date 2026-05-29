@@ -13,7 +13,7 @@ export interface MasterInput {
   /** text MUST already be XML-escaped by the caller. */
   additionalText: { text: string; font: string; size: number; color: string } | null;
   /** Per-dot shrink factor for the "dot spacing" control. 1 = dots touch (default);
-   *  <1 inserts a gap between data dots. Only data dots shrink — finder patterns stay
+   *  <1 inserts a gap between data dots. Only data dots shrink - finder patterns stay
    *  solid so scannability is preserved. */
   dotScale?: number;
 }
@@ -41,7 +41,7 @@ function namespaceIds(root: Element, prefix: string): void {
     for (const attr of Array.from(el.attributes)) {
       let v = attr.value;
       if (v.includes('url(')) {
-        // Handle url(#id), url('#id') and url("#id") — qr-code-styling emits single quotes.
+        // Handle url(#id), url('#id') and url("#id") - qr-code-styling emits single quotes.
         v = v.replace(/url\((['"]?)#([^'")]+)\1\)/g, (_m, q: string, id: string) => {
           return `url(${q}#${map.get(id) ?? id}${q})`;
         });
@@ -56,7 +56,7 @@ function namespaceIds(root: Element, prefix: string): void {
 
 /** Shrink each DATA dot toward its own centre to open a gap between dots.
  *  qr-code-styling emits one element per module inside the dots clipPath, each carrying a
- *  `rotate(angle, cx, cy)` transform whose pivot (cx,cy) is the cell centre — we reuse that
+ *  `rotate(angle, cx, cy)` transform whose pivot (cx,cy) is the cell centre - we reuse that
  *  centre to scale in place. Finder-pattern dots live in their OWN clipPaths
  *  (corners-square / corners-dot), so they are untouched and stay solid. */
 function applyDotScale(qrRoot: Element, dotScale: number): void {
@@ -145,7 +145,7 @@ export function buildMasterSvg(input: MasterInput): MasterSvg {
 
 /** Defense-in-depth sanitizer for the ONE place SVG enters the live DOM (preview
  *  innerHTML). Keeps the QR's <image> data-URL logo and filter defs; strips any
- *  script/foreignObject/event handlers. The export path does NOT use this — there the
+ *  script/foreignObject/event handlers. The export path does NOT use this - there the
  *  SVG is loaded as a non-scripting <img>, and we must not risk dropping the user's logo. */
 export function sanitizeSvgForDom(svg: string): string {
   return DOMPurify.sanitize(svg, {

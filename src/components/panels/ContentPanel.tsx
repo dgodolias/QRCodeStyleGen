@@ -77,7 +77,7 @@ export function ContentPanel() {
           <span>⚠</span>
           <span>
             This QR encodes a <code>{report.warnScheme}</code> link. Some scanners may open it
-            automatically — only continue if you trust it.
+            automatically - only continue if you trust it.
           </span>
         </div>
       )}
