@@ -1,0 +1,34 @@
+{
+  "name": "qr-code-style-gen",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Open-source, 100% client-side QR code style generator (shapes, frames, logo, additional text). No backend, privacy-first.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173",
+    "lint": "tsc --noEmit",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.1.0",
+    "dompurify": "^3.2.4",
+    "qr-code-styling": "^1.9.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  }
+}

@@ -1,0 +1,74 @@
+/* ============================================================
+   Stitch design tokens
+   Lifted from stitch.withgoogle.com (C:\Users\demosgod\Desktop\DESIGNS\stitch).
+   Font stack adapted: self-hosted "Inter" (bundled via @fontsource, see main.tsx)
+   is the open fallback. "Google Sans" stays first for machines that have it,
+   so we keep the look without loading Google Fonts CDN (privacy + tight CSP).
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+
+  /* Fonts */
+  --font-display: "Google Sans Display", "Inter", -apple-system,
+                  BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-body:    "Google Sans Text", "Inter", -apple-system,
+                  BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+
+  /* Surfaces — semi-transparent so any background layer shows through */
+  --bg:          #ffffff;       /* page background */
+  --surface:     rgba(255, 255, 255, 0.66);   /* primary card */
+  --surface-hi:  rgba(255, 255, 255, 0.88);   /* elevated card / bubble */
+  --surface-lo:  rgba(248, 249, 251, 0.72);   /* recessed surface */
+
+  /* Ink */
+  --ink:         #0a0a14;       /* primary text on light bg */
+  --ink-soft:    #20222d;       /* body text */
+  --muted:       #5b6275;       /* secondary text */
+  --quiet:       #9aa0b0;       /* placeholder, hint */
+
+  /* Lines + accents */
+  --hairline:        rgba(10, 10, 20, 0.07);   /* default border */
+  --hairline-strong: rgba(10, 10, 20, 0.14);   /* focused border */
+  --accent:          #0a0a14;                  /* default action color */
+  --accent-soft:     rgba(10, 10, 20, 0.06);   /* hover wash */
+  --danger:          #d9484e;                  /* destructive / recording */
+  --warn:            #b7791f;                  /* soft warning text */
+  --ok:              #1f7a4d;                  /* success text */
+
+  /* Radii — Stitch favors generous, consistent rounding */
+  --r-pill:  999px;     /* buttons, chips, input rows */
+  --r-card:  28px;      /* main cards */
+  --r-input: 18px;      /* standalone inputs */
+  --r-chip:  14px;      /* small tags, toggles */
+
+  /* Shadows — soft, layered, never harsh */
+  --shadow-card: 0 1px 0 rgba(10, 10, 20, 0.02),
+                 0 12px 32px -16px rgba(10, 10, 20, 0.12);
+  --shadow-pop:  0 1px 0 rgba(10, 10, 20, 0.04),
+                 0 8px 28px -8px rgba(10, 10, 20, 0.18);
+  --shadow-focus: 0 0 0 4px rgba(10, 10, 20, 0.04);
+}
+
+/* Body defaults */
+html, body {
+  background: var(--bg);
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display type */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  font-weight: 500;
+}
+h1 { font-size: 32px; }
+h2 { font-size: 24px; }
+h3 { font-size: 19px; }
