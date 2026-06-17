@@ -17,13 +17,13 @@
     "@fontsource/inter": "^5.1.0",
     "dompurify": "^3.2.4",
     "qr-code-styling": "^1.9.2",
-    "react": "^18.3.1",
+    "react": "^19.2.6",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.50.1",
     "@types/pngjs": "^6.0.5",
-    "@types/react": "^18.3.18",
+    "@types/react": "^19.2.15",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "jsqr": "^1.4.0",
