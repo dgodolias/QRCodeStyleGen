@@ -18,13 +18,13 @@
     "dompurify": "^3.2.4",
     "qr-code-styling": "^1.9.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "@playwright/test": "^1.50.1",
     "@types/pngjs": "^6.0.5",
     "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.3.4",
     "jsqr": "^1.4.0",
     "pngjs": "^7.0.0",
